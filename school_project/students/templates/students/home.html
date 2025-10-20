@@ -1,0 +1,225 @@
+{% extends 'students/base.html' %}
+{% block title %}Welcome to Our School{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<!-- Hero Slider -->
+<!-- Hero Slider -->
+<div id="schoolCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" 
+           class="d-block w-100" style="height: 80vh; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="fw-bold text-light">🏫 Welcome to Bright Future International School</h1>
+        <p class="lead text-light">Empowering young minds for a brighter tomorrow.</p>
+        <a href="{% url 'about' %}" class="btn btn-light btn-lg">Learn More</a>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7"
+           class="d-block w-100" style="height: 80vh; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="fw-bold text-light">🎓 Excellence in Education</h1>
+        <p class="lead text-light">Where every student matters and every dream counts.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238"
+           class="d-block w-100" style="height: 80vh; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="fw-bold text-light">💻 Modern Learning Environment</h1>
+        <p class="lead text-light">Blending technology with creativity and innovation.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#schoolCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#schoolCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+
+<!-- Mission and Vision -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">🎯 Our Mission & Vision</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3 border-0">
+          <div class="card-body">
+            <h4>🌟 Our Mission</h4>
+            <p>
+              To nurture future leaders by providing quality education in a
+              supportive environment that encourages curiosity, creativity, and character.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3 border-0">
+          <div class="card-body">
+            <h4>🚀 Our Vision</h4>
+            <p>
+              To be a world-class learning community where students achieve their full potential
+              and contribute meaningfully to society.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Academic Programs -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">📚 Our Academic Programs</h2>
+    <p class="text-muted mb-5">
+      We offer a variety of programs designed to help students grow intellectually,
+      socially, and emotionally.
+    </p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5>🧒 Nursery & Primary</h5>
+            <p>Building strong foundations in literacy, numeracy, and creativity for young learners.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5>👩‍🎓 Secondary Education</h5>
+            <p>Developing critical thinkers and problem solvers for a brighter future.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5>💻 ICT & Digital Skills</h5>
+            <p>Preparing students for the digital world through coding and technology education.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet Our Teachers -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">👩‍🏫 Meet Our Teachers</h2>
+    <p class="text-muted mb-5">
+      Our dedicated teachers inspire, guide, and nurture every student to reach their full potential.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm border-0 h-100">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" 
+               class="card-img-top" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="fw-bold">Mrs. Grace Johnson</h5>
+            <p class="text-muted">Head of Primary Section</p>
+            <p>Specializes in child-centered learning and creativity.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm border-0 h-100">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1"
+               class="card-img-top" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="fw-bold">Mr. Samuel Adewale</h5>
+            <p class="text-muted">Mathematics Teacher</p>
+            <p>Passionate about logical reasoning and problem-solving skills.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm border-0 h-100">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+               class="card-img-top" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="fw-bold">Mrs. Anita Okafor</h5>
+            <p class="text-muted">Science & ICT Teacher</p>
+            <p>Encourages hands-on learning and modern teaching tools.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm border-0 h-100">
+          <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79"
+               class="card-img-top" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="fw-bold">Mr. Daniel Nwosu</h5>
+            <p class="text-muted">English & Literature</p>
+            <p>Fosters communication and creative writing among students.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">💬 What Parents Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <p>“Bright Future School transformed my child’s confidence and academic performance. Highly recommended!”</p>
+            <h6 class="fw-bold mt-3">— Mrs. Johnson</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <p>“The teachers are amazing and caring. The school environment feels like a family.”</p>
+            <h6 class="fw-bold mt-3">— Mr. Adewale</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <p>“A school that truly focuses on excellence and character development.”</p>
+            <h6 class="fw-bold mt-3">— Mrs. Okafor</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 text-center text-light bg-primary">
+  <div class="container">
+    <h2>Join Bright Future International School Today!</h2>
+    <p class="lead">Enroll your child and give them a strong foundation for success.</p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg mt-2">Contact Us</a>
+  </div>
+</section>
+
+{% endblock %}
+
+

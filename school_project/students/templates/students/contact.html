@@ -1,0 +1,30 @@
+{% extends 'students/base.html' %}
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="mt-4">
+  <h2 class="text-center">📞 Contact Us</h2>
+  <p class="text-center text-muted">We’d love to hear from you!</p>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+      <form method="POST" class="shadow p-4 bg-white rounded">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="4" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
