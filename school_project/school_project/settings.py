@@ -20,12 +20,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h#i2iqfkr2txnav)5fc#1n$+%dk@8o&u3z@aa)vg=1t6w8gemh'
+# SECRET_KEY = 'django-insecure-h#i2iqfkr2txnav)5fc#1n$+%dk@8o&u3z@aa)vg=1t6w8gemh'
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'fallback-secret-key')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['maxc12.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -73,16 +76,23 @@ WSGI_APPLICATION = 'school_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'school_db',
+#         'USER': 'root',
+#         'PASSWORD': 'Maxwell123456789&&',  # your MySQL password
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'school_db',
-        'USER': 'root',
-        'PASSWORD': 'Maxwell123456789&&',  # your MySQL password
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 
@@ -126,3 +136,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'mediafiles'
